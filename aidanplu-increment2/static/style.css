@@ -24,11 +24,20 @@
   }
 
   nav a:hover {
-    border-color: #4d5c3b;
+    border-color: #F5C542;
     }
 
 #navselected {
-     color:#92ad70;    
+     color:#F5C542;    
+    }
+
+.cta {
+    background-color: #1F8500;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 25px;
+    border: none;
     }
 
 footer {
