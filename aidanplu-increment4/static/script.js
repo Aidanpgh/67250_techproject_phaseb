@@ -94,7 +94,7 @@ function addYear() {
 
 function ActiveNav() {
     // Get all navigation links
-    const navLinks = document.querySelectorAll('nav li a');
+    const navLinks = document.querySelectorAll('.nav_bar a');
 
     // Iterate over each link
     navLinks.forEach(link => {
