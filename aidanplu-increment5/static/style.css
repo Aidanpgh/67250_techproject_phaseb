@@ -1,16 +1,19 @@
 * {
-    padding: 5px;
-    margin: 5px;
-    background: #02123B;
-    color:  #FFFFFF;
+    padding: 0;
+    margin: 0;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
     line-height: 1.5;
   }
+
+body {
+  background-color: #02123B;
+  color: #FFFFFF;
+  font-weight: 300;
+}
   
   #logo {
-    width: 18%;
+    width: 150px;
     display: block;
   }
   
@@ -23,21 +26,25 @@
     border-radius: 12px;
   }
 
-  nav a:hover {
-    border-color: #F5C542;
-    }
+nav a:hover {
+  border-color: #F5C542;
+}
 
 .active {
       color: #F5C542;
   }
 
 .cta {
-    background-color: #1F8500;
+    background-color: #E8453C;
     color: #fff;
     font-weight: 700;
     padding: 10px 24px;
     border-radius: 25px;
     border: none;
+    }
+
+.cta:hover {
+    background-color: #d63a32;
     }
 
 footer {
@@ -61,38 +68,22 @@ form * {
         margin: auto;
         text-align: center;
 }
-
-.container {
-    display: grid; /* Turns this div into a CSS Grid layout */
-    grid-template-areas:   /* Defines the layout structure */
-            'header header'
-            'nav_bar nav_bar'
-            'main main-img'
-            'footer footer';
-}
         
-        /* Places each element into the correct area of the grid */
+
 .header {
-      grid-area: header; 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
 }
 
 .nav_bar {
-      grid-area: nav_bar; 
-      display: flex; /* Uses Flexbox for internal layout */
-      justify-content: right;   /* Right aligns the content */
+  grid-area: nav_bar;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
-.main {
-      grid-area: main; 
-}
-
-.main_img {
-      grid-area: main-img; 
-}
-
-.footer {
-      grid-area: footer;
-}
 
 #longIntro {
   display: none;
@@ -111,19 +102,13 @@ form * {
   display: none;
 }
 
-@media only screen and (max-width: 768px) {
-  /* Your CSS code for the mobile layout */
-}
-
-.nav_bar {
-  grid-area: nav_bar;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
+/* Mobile Hamburger Icon*/
 .nav_bar .icon {
   display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Your CSS code for the mobile layout */
 }
 
 @media only screen and (max-width: 650px) {
@@ -163,3 +148,127 @@ iframe {
 #map {
    height: 180px; 
   }
+
+/* Index.html */
+
+/* Intro section*/
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.intro-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Buy Now Button */
+.btn-buy {
+  background-color: #E8453C;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-buy:hover {
+  background-color: #d63a32;
+}
+
+/* Read More Link */
+.read-more-link {
+  color: #F5C542;
+  font-weight: 400;
+  margin-left: 16px;
+}
+
+/* Plan Your Visit section */
+.plan-visit {
+  text-align: center;
+  padding: 50px;
+}
+
+.plan-visit h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.plan-card h3 {
+  color: #F5C542;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.plan-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.plan-card {
+  background-color: #0F3460;
+  border-radius: 14px;
+  flex: 1;
+  text-align: center;
+}
+
+/* Member and Donate section */
+.member-support {
+  display: flex;
+  background-color: #245691;
+  padding: 40px;
+  gap: 40px;
+}
+
+.member-col, .donate-col {
+  flex: 1;
+  padding: 20px;
+}
+
+.member-col h2, .donate-col h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.member-col p, .donate-col p {
+  margin-bottom: 16px;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* Outline button (Learn More / Donate) */
+.btn-member {
+  background: transparent;
+  color: #F5C542;
+  border: 1px solid #F5C542;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-donate {
+  background: transparent;
+  color: #3FCE62;
+  border: 1px solid #3FCE62;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
