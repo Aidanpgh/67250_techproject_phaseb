@@ -116,7 +116,7 @@ form * {
 }
 
 .nav_bar {
-  grid_area: nav_bar;
+  grid-area: nav_bar;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
