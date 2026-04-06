@@ -141,10 +141,10 @@ function toggleMenu() {
 }
 
 if (document.getElementById("map")) {
-    var map = L.map('map').setView([40.4568, -79.9538], 15);
+    var map = L.map('map').setView([40.44437756962417, -79.94868432806523], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-    L.marker([40.4568, -79.9538]).addTo(map);
+    L.marker([40.44437756962417, -79.94868432806523]).addTo(map);
 }
