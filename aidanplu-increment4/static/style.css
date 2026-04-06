@@ -107,6 +107,10 @@ form * {
   cursor: pointer;
 }
 
+#ticketPurchaseForm {
+  display: none;
+}
+
 
        
         

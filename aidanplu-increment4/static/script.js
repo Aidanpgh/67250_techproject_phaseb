@@ -123,3 +123,14 @@ ActiveNav();
     $("#readLess").show();   // Show the "Read Less" button
     $("#readMore").hide();   // Hide the "Read More" button  
   });
+
+function showTicketPurchaseForm() {
+    var form = document.getElementById("ticketPurchaseForm");
+    if (form) {
+        form.style.display = "block"; 
+    }
+}
+
+function formSubmitted () {
+    alert("Redirecting to payment system.")
+}
