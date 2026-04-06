@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
     <script src="../static/script.js" defer></script>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +30,7 @@
             <a href="explore.html">Explore</a>
             <a href="exhibitions.html">Exhibitions</a>
             <a class="cta" href="buytickets.html">Buy Tickets</a>
-            <a href = "javascript:void(0)" class = "icon" onclick = "toggleMenu()"</a></a>
+            <a href = "javascript:void(0)" class = "icon" onclick = "toggleMenu()">☰</a>
         </nav>
     </header>
 
@@ -46,6 +52,14 @@
         <li>2018: Launch of the Interative Media Lab, allowing visitors to experiment with creative coding.</li>
         <li>2023: Expansion of the museum to space to include a new wing dedicated to virtual reality art.</li>
     </ul>
+
+    <h2>Getting Here</h2>
+        <p>123 Street Avenue, Pittsburgh, PA 15212</p>
+        <p>Parking available on-site. Accessible via bus routes 61A, 61B, 71A.</p>
+    <div id="map"></div>
+
+    <h2> View Our Most Recent Exhibit</h2>
+    <iframe src="https://www.youtube.com/embed/XYY43BsL_-U?si=VZTJijtByqc1-WR2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </main>
     
     <footer class = "footer">

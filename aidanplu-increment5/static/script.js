@@ -139,3 +139,12 @@ function toggleMenu() {
     const nav = document.querySelector('.nav_bar');
     nav.classList.toggle("responsive");
 }
+
+if (document.getElementById("map")) {
+    var map = L.map('map').setView([40.4568, -79.9538], 15);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    L.marker([40.4568, -79.9538]).addTo(map);
+}
