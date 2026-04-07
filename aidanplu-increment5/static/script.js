@@ -148,3 +148,64 @@ if (document.getElementById("map")) {
     }).addTo(map);
     L.marker([40.44437756962417, -79.94868432806523]).addTo(map);
 }
+
+// exhibition.html functions (change slide for gallery)
+
+var slideIndex = 0;
+
+function changeSlide(direction) {
+    var slides = document.querySelectorAll('.slideshow img');
+    if (slides.length === 0) return;
+
+    slides[slideIndex].classList.remove('show-slide');
+    slideIndex = slideIndex + direction;
+
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+
+    slides[slideIndex].classList.add('show-slide');
+}
+
+// buyticket.html functions
+
+function selectDate(day) {
+    document.getElementById("ticketPurchaseForm").style.display = "block";
+    document.getElementById("selected_date").value = "July " + day + ", 2026";
+}
+
+function calculateTotal() {
+    var price = document.getElementById("ticketType").value;
+    var qty = document.getElementById("ticket_quantity").value;
+    var total = price * qty;
+    document.getElementById("orderTotal").textContent = total.toFixed(2);
+}
+
+function placeOrder() {
+    var email = document.getElementById("email").value;
+    var qty = document.getElementById("ticket_quantity").value;
+    var zip = document.getElementById("zipcode").value;
+
+    if (email == "" || email.indexOf("@") == -1) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    if (qty == "" || qty < 1 || qty > 10) {
+        alert("Please enter a quantity between 1 and 10.");
+        return;
+    }
+
+    if (zip != "" && zip.length != 5) {
+        alert("Zip code must be 5 digits.");
+        return;
+    }
+
+    var total = document.getElementById("orderTotal").textContent;
+    var date = document.getElementById("selected_date").value;
+
+    document.getElementById("confirmationDetails").textContent = 
+        "Date: " + date + " | Quantity: " + qty + " | Total: $" + total;
+    
+    document.getElementById("confirmationMessage").style.display = "block";
+    document.getElementById("ticketPurchaseForm").style.display = "none";
+}

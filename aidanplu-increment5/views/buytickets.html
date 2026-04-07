@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aidan Plummer">
@@ -20,118 +20,154 @@
 
     <header class = "header">
         <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+        <nav class = "nav_bar">
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a class="cta" id="navselected" href="buytickets.html">Buy Tickets</a>
+            <a href = "javascript:void(0)" class = "icon" onclick = "toggleMenu()">☰</a>
+        </nav>
     </header>
 
-    <nav class = "nav_bar">
-        <a href="../index.html">Home</a>
-        <a href="explore.html">Explore</a>
-        <a href="exhibitions.html">Exhibitions</a>
-        <a class="cta" href="buytickets.html">Buy Tickets</a>
-        <a href = "javascript:void(0)" class = "icon" onclick = "toggleMenu()">☰</a>
-    </nav>
+    <h1 class="heading">Buy Tickets</h1>
 
-<main class = "main">
-    <table>
-        <tr>
-            <th>Ticket Type</th>
-            <th>Description</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Adult</td>
-            <td>General admission for ages over 18. Under 18 free of charge</td>
-            <td>$18.00</td>
-        </tr>
-        <tr>
-            <td>Member</td>
-            <td>Member ID required</td>
-            <td>$15.00</td>
-        </tr>
-        <tr>
-            <td>Student</td>
-            <td>Student ID required</td>
-            <td>$10.00</td>
-        </tr>
-    </table>
+    <section class="ticket-info">
+        <h2> Ticket Pricing</h2>
+        <table class = "ticket-table">
+            <tr>
+                <th>Ticket Type</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Adult</td>
+                <td>General admission for ages over 18. Under 18 free of charge</td>
+                <td>$18.00</td>
+            </tr>
+            <tr>
+                <td>Member</td>
+                <td>Member ID required</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Student</td>
+                <td>Student ID required</td>
+                <td>$10.00</td>
+            </tr>
+        </table>
+    </section>
 
-    <h3> Monthy Calendar (Select a Date to Buy a Ticket) </h3>
+    <section class="calendar-section">
+        <h2>Monthly Schedule (Select a Date)</h2>
+        <table class="calendar-table">
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+            <tr>
+                <td style="visibility:hidden"></td>
+                <td style="visibility:hidden"></td>
+                <td style="visibility:hidden"></td>
+                <td class = "museum-open" onclick="selectDate(1)">1</td>
+                <td class = "museum-open" onclick="selectDate(2)">2</td>
+                <td class = "museum-open" onclick="selectDate(3)">3</td>
+                <td class = "museum-open" onclick="selectDate(4)">4</td>
+            </tr>
+            <tr>
+                <td class = "museum-closed">5</td>
+                <td class = "museum-closed">6</td>
+                <td class = "museum-closed">7</td>
+                <td class = "museum-open" onclick="selectDate(8)">8</td>
+                <td class = "museum-open" onclick="selectDate(9)">9</td>
+                <td class = "museum-open" onclick="selectDate(10)">10</td>
+                <td class = "museum-open" onclick="selectDate(11)">11</td>
+            </tr>
+            <tr>
+                <td class = "museum-closed">12</td>
+                <td class = "museum-closed">13</td>
+                <td class = "museum-closed">14</td>
+                <td class = "museum-open" onclick="selectDate(15)">15</td>
+                <td class = "museum-open" onclick="selectDate(16)">16</td>
+                <td class = "museum-open" onclick="selectDate(17)">17</td>
+                <td class = "museum-open" onclick="selectDate(18)">18</td>
+            </tr>
+            <tr>
+                <td class = "museum-closed">19</td>
+                <td class = "museum-closed">20</td>
+                <td class = "museum-closed">21</td>
+                <td class = "museum-open" onclick="selectDate(22)">22</td>
+                <td class = "museum-open" onclick="selectDate(23)">23</td>
+                <td class = "museum-open" onclick="selectDate(24)">24</td>
+                <td class = "museum-open" onclick="selectDate(25)">25</td>
+            </tr>
+            <tr>
+                <td class = "museum-closed">26</td>
+                <td class = "museum-closed">27</td>
+                <td class = "museum-closed">28</td>
+                <td class = "museum-open" onclick="selectDate(29)">29</td>
+                <td class = "museum-open" onclick="selectDate(30)">30</td>
+                <td class = "museum-open" onclick="selectDate(31)">31</td>
+            </tr>
+        </table>
+        <div class="calendar-legend">
+            <div class="legend-item">
+                <span class="legend-box museum-closed"></span> Closed
+            </div>
+            <div class="legend-item">
+                <span class="legend-box museum-open"></span> Open
+            </div>
+        </div>
+    </section>
 
-    <table>
-        <tr>
-            <th>Sun</th>
-            <th>Mon</th>
-            <th>Tue</th>
-            <th>Wed</th>
-            <th>Thu</th>
-            <th>Fri</th>
-            <th>Sat</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td onclick="showTicketPurchaseForm()">1</td>
-            <td onclick="showTicketPurchaseForm()">2</td>
-            <td onclick="showTicketPurchaseForm()">3</td>
-            <td onclick="showTicketPurchaseForm()">4</td>
-        </tr>
-        <tr>
-            <td onclick="showTicketPurchaseForm()">5</td>
-            <td onclick="showTicketPurchaseForm()">6</td>
-            <td onclick="showTicketPurchaseForm()">7</td>
-            <td onclick="showTicketPurchaseForm()">8</td>
-            <td onclick="showTicketPurchaseForm()">9</td>
-            <td onclick="showTicketPurchaseForm()">10</td>
-            <td onclick="showTicketPurchaseForm()">11</td>
-        </tr>
-        <tr>
-            <td onclick="showTicketPurchaseForm()">12</td>
-            <td onclick="showTicketPurchaseForm()">13</td>
-            <td onclick="showTicketPurchaseForm()">14</td>
-            <td onclick="showTicketPurchaseForm()">15</td>
-            <td onclick="showTicketPurchaseForm()">16</td>
-            <td onclick="showTicketPurchaseForm()">17</td>
-            <td onclick="showTicketPurchaseForm()">18</td>
-        </tr>
-        <tr>
-            <td onclick="showTicketPurchaseForm()">19</td>
-            <td onclick="showTicketPurchaseForm()">20</td>
-            <td onclick="showTicketPurchaseForm()">21</td>
-            <td onclick="showTicketPurchaseForm()">22</td>
-            <td onclick="showTicketPurchaseForm()">23</td>
-            <td onclick="showTicketPurchaseForm()">24</td>
-            <td onclick="showTicketPurchaseForm()">25</td>
-        </tr>
-        <tr>
-            <td onclick="showTicketPurchaseForm()">26</td>
-            <td onclick="showTicketPurchaseForm()">27</td>
-            <td onclick="showTicketPurchaseForm()">28</td>
-            <td onclick="showTicketPurchaseForm()">29</td>
-            <td onclick="showTicketPurchaseForm()">30</td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-
-    <div id="ticketPurchaseForm">
-        <form>
-            <label for="name">Name</label><br>
-            <input type="text" id="name" name="name"><br><br>
-
-            <label for="email">Email (required):</label><br>
-            <input type="email" id="email" name="email"><br><br>
         
-            <label for="ticket_quantity">Ticket Quantity (required):</label><br>
-            <input type="text" id="ticket_quantity" name="ticket_quantity"><br><br>
 
-            <label for="selected_date">Selected Date:</label><br>
-            <input type="text" id="selected_date" name="selected_date"><br><br>
-            
-            <input type="submit" value="Submit" onclick="formSubmitted()">
-        </form>
+    
 
+    <div class="ticket-purchase-form" id="ticketPurchaseForm">
+        <h2>Purchase Tickets</h2>
+
+        <label for="selected_date">Selected Date:</label>
+        <input type="text" id="selected_date" name="selected_date" readonly>
+        
+        <label for="ticketType">Ticket Type (Required)</label>
+        <select id="ticketType" name="ticketType" onchange="calculateTotal()">
+            <option value="18">Adult - $18.00</option>
+            <option value="10">Student - $10.00</option>
+            <option value="15">Member - $15.00</option>
+        </select>
+
+
+        
+        
+        <label for="ticket_quantity">Ticket Quantity (Required)</label>
+        <input type="text" id="ticket_quantity" name="ticket_quantity" onchange= "calculateTotal()">
+
+        <label for="email">Email (Required)</label>
+        <input type="email" id="email" name="email">
+
+        <label for="zipcode">Zip Code</label>
+        <input type="text" id="zipcode" name="zipcode" maxlength="5">
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="mailingList" name="mailingList">
+            <label for="mailingList">Join our mailing list</label>
+        </div>
+
+        <p class="order-total">Total: $<span id="orderTotal">18.00</span></p>
+
+        <button class="btn-order" onclick="placeOrder()">Place Order</button>
     </div>
-</main>
+
+
+    <div class="confirmation_message" id="confirmationMessage">
+        <h2>Order Confirmed!</h2>
+        <p id="confirmationDetails"></p>
+    </div>
     
 <footer class = "footer">
     <p id="copyYear"></p>

@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
     <script src="../static/script.js" defer></script>
     <link rel="stylesheet" href="../static/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aidan Plummer">
     <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
     <meta name="description" content="MonoMuse website redesign project">
     <title>MonoMuse - Exhibitions</title>
-<head>
+</head>
 
 <body onload="addYear()">
 <div class = "container">
@@ -27,14 +28,47 @@
             <a href = "javascript:void(0)" class = "icon" onclick = "toggleMenu()">☰</a>
         </nav>
     </header>
-    
-<main class = "main">
-    <h3>Exibition 1: Virtual Reality: Expanding Art Into Three Dimensions</h3>
-    <p>Experience the future of art with our groundbreaking exhibition on virtual reality. This immersive showcase features a curated selection of VR artworks that push the boundaries of creativity and technology. From interactive installations to fully immersive environments, visitors can explore new dimensions of artistic expression and engage with art in ways never before possible.</p>
-    
-    <h3>Exibition 2: The Art of Code: Creative Coding in the Digital Age</h3>
-    <p>Discover the intersection of art and technology with our exhibition on creative coding. This showcase features a diverse range of artworks created using programming languages and algorithms, highlighting the innovative ways artists are using code to create dynamic, interactive, and visually stunning pieces. From generative art to interactive installations, this exhibition celebrates the creativity and ingenuity of artists working at the forefront of digital innovation.</p>
-</main>
+
+<h1 class ="heading">Current Exhibitions</h1>
+
+
+<div class="exhibition-card">
+    <img src="../static/museums-virtual-reality-vr.jpg">
+    <div class = "exhibition-card-text">
+        <h3>Virtual Reality</h3>
+        <h4>Expanding Art Into Three Dimensions</h4>
+        <p>Experience the future of art with our groundbreaking exhibition on virtual reality. This immersive showcase features a curated selection of VR artworks that push the boundaries of creativity and technology. From interactive installations to fully immersive environments, visitors can explore new dimensions of artistic expression and engage with art in ways never before possible.</p>
+    </div>
+</div>
+
+<div class = "exhibition-card">
+    <img src="../static/code_art.jpg">
+    <div class = "exhibition-card-text">
+        <h3>The Art of Code</h3>
+        <h4>Creative Coding in the Digital Age</h4>
+        <p>Discover the intersection of art and technology with our exhibition on creative coding. This showcase features a diverse range of artworks created using programming languages and algorithms, highlighting the innovative ways artists are using code to create dynamic, interactive, and visually stunning pieces. From generative art to interactive installations, this exhibition celebrates the creativity and ingenuity of artists working at the forefront of digital innovation.</p>
+    </div>
+</div>
+
+<div class = "exhibition-card">
+    <img src="../static/human-machine.png">
+    <div class = "exhibition-card-text">
+        <h3>Human-Computer Interaction</h3>
+        <h4>Collaboration Between Machines and Humans</h4>
+        <p>Experience how humans and machines can interact to produce 2D art through interaction. This exhibit showcases advancements in machine translation and interactive features that allow for seamless collaboration.</p>
+    </div>
+</div>
+
+<section class = "gallery">
+    <h2>Gallery</h2>
+    <div class="slideshow">
+        <button class="slideshow-btn prev" onclick="changeSlide(-1)">←</button>
+        <img src="../static/gallery-1.jpg" alt="Gallery image 1 - Interactive Display" class="show-slide">
+        <img src="../static/gallery-2.jpg" alt="Gallery image 2 - Tiny Home Installation">
+        <img src="../static/gallery-3.jpeg" alt="Gallery image 3 - Tour Guide">
+        <button class="slideshow-btn next" onclick="changeSlide(1)">→</button>
+    </div>
+</section>
 
     <footer class = "footer">
         <p id="copyYear"></p>
