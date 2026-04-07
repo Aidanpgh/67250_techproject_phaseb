@@ -272,3 +272,95 @@ iframe {
   text-decoration: none;
   font-size: 14px;
 }
+
+/* explore.html*/
+.heading {
+  text-align: center;
+  font-size: 35px;
+  padding: 40px;
+}
+
+.monomuse-image {
+  width: 75%;
+  border-radius: 14px;
+  display: block;
+  margin: auto;
+}
+
+.monomuse-image img {
+  width: 100%;
+}
+
+/* Main content section */
+
+.main-content {
+  padding: 30px 40px;
+}
+
+.main-content h2 {
+  color: #F5C542;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.main-content p {
+  font-size: 15px;
+}
+
+.main-content ul {
+  margin-left: 20px;
+}
+
+.main-content li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Getting here section */
+.getting-here {
+  display: flex;
+  gap: 40px;
+  padding: 80px 40px;
+  background-color: #245691;
+  align-items: center;
+}
+
+.getting-here-text {
+  flex: 1;
+}
+
+.getting-here-text h2 {
+  color: #F5C542;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.getting-here-text p {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.getting-here-map {
+  flex: 1;
+}
+
+.getting-here-map #map {
+  height: 350px;
+  border-radius: 14px;
+}
+
+/* Video Section*/
+.museum-video {
+  text-align: center;
+  padding: 40px;
+}
+
+.museum-video h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
